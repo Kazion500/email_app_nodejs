@@ -44,8 +44,8 @@ module.exports.sendEmail = async (email, body, subject, SUCCESS_MGS) => {
   });
 
   const mailOptions = {
-    from: "njfdigital.com <info@njfdigital.com>",
-    to: "info@njfdigital.com",
+    from: `example.com <${process.env.EMAIL}>`,
+    to: process.env.EMAIL,
     subject,
     text: body,
   };
